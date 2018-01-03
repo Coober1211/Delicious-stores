@@ -7,7 +7,7 @@ const uuid = require('uuid');
 
 const multerOptions = {
   storage: multer.memoryStorage(),
-  filefilter(req, file, next) {
+  fileFilter(req, file, next) {
     const isPhoto = file.mimetype.startsWith('image/');
     if(isPhto) {
       next(null, true)
